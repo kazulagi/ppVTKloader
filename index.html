@@ -31,6 +31,15 @@
 	
 <body oncopy="return false;">
     hello
+    <script>
+        var xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://usefulapis.net/api');
+xhr.addEventListener('load', onLoadFunc, false);
+xhr.send(null);
+        fetch('https://plantfem.org', {
+            mode: 'cors'
+          }).then(onLoadFunc);
+    </script>
     <script src="https://plantfem.org/plantfem.js?date=20210814v4"></script>
 </body>
 </html>
