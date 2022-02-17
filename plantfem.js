@@ -133,7 +133,7 @@
 
         
         var leaf_material = new THREE.MeshLambertMaterial({
-          map: matloader.load('https://console.firebase.google.com/project/plantfem-27346/storage/plantfem-27346.appspot.com/files/image877.png'),
+          map: matloader.load('https://plantfem.org/image877.png'),
         });
         var root_material = new THREE.MeshLambertMaterial({color: 0xF3E495});
         var stem_material = new THREE.MeshLambertMaterial({color: 0xCBC547});
@@ -141,7 +141,7 @@
         
         let grass_material = new THREE.MeshPhongMaterial();
         var textuerLoader_g = new THREE.TextureLoader();
-        let textuer_g = textuerLoader_g.load('https://console.firebase.google.com/project/plantfem-27346/storage/plantfem-27346.appspot.com/files/grass.jpg');
+        let textuer_g = textuerLoader_g.load('https://plantfem.org/grass.jpg');
         grass_material.map = textuer_g;
         grass_material.map.wrapS = THREE.RepeatWrapping;
         grass_material.map.wrapT = THREE.RepeatWrapping;
@@ -207,7 +207,7 @@
         var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
         camera.position.set(0, -3, 5 );
         const tloader = new THREE.TextureLoader();
-        scene.background = tloader.load( 'https://console.firebase.google.com/project/plantfem-27346/storage/plantfem-27346.appspot.com/files/image.jpg' );
+        scene.background = tloader.load( 'https://plantfem.org/image.jpg' );
         //var control = new THREE.OrbitControls( camera, renderer.domElement );
         //camera.position.x = camera.position.x - 10.0 
     
@@ -222,7 +222,7 @@
         let textuerLoader = new THREE.TextureLoader();
         let mat = new THREE.MeshPhongMaterial();
 
-        let textuer = textuerLoader.load('https://console.firebase.google.com/project/plantfem-27346/storage/plantfem-27346.appspot.com/files/soil.jpg');
+        let textuer = textuerLoader.load('https://plantfem.org/soil.jpg');
         mat.map = textuer;
         mat.map.wrapS = THREE.RepeatWrapping;
         mat.map.wrapT = THREE.RepeatWrapping;
@@ -375,7 +375,7 @@
         
         for(let j=0; j<row; j++){
             for (let i=0; i<pl; i++){
-                loader.load( 'https://console.firebase.google.com/project/plantfem-27346/storage/plantfem-27346.appspot.com/files/soy_stem_'+stage+'.stl',  function ( geometry1 ) {
+                loader.load( 'https://plantfem.org/soy_stem_'+stage+'.stl',  function ( geometry1 ) {
                         var stl_geo_stem = new THREE.Mesh( geometry1, stem_material )
                         stl_geo_stem.rotation.x = 0//Math.PI / 180 * 90
                         stl_geo_stem.rotation.y = 0//Math.PI / 180 * 90
@@ -387,7 +387,7 @@
                         group.add( stl_geo_stem);
                     
                 });
-                loader.load( 'https://console.firebase.google.com/project/plantfem-27346/storage/plantfem-27346.appspot.com/files/soy_leaf_'+stage+'.stl',  function ( geometry2 ) {
+                loader.load( 'https://plantfem.org/soy_leaf_'+stage+'.stl',  function ( geometry2 ) {
                     
                         var stl_geo_leaf = new THREE.Mesh( geometry2, leaf_material )
                         stl_geo_leaf.rotation.x = 0//Math.PI / 180 * 90
@@ -400,7 +400,7 @@
                         group.add( stl_geo_leaf);
                     
                 });
-                loader.load( 'https://console.firebase.google.com/project/plantfem-27346/storage/plantfem-27346.appspot.com/files/soy_root_'+stage+'.stl',  function ( geometry3 ) {
+                loader.load( 'https://plantfem.org/soy_root_'+stage+'.stl',  function ( geometry3 ) {
                     
                         var stl_geo_root = new THREE.Mesh( geometry3, root_material )
                         stl_geo_root.rotation.x = 0//Math.PI / 180 * 90
